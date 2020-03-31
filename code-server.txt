@@ -1,0 +1,6 @@
+## Log into docker file
+docker exec -it $container-id
+
+## Detached
+
+docker run --env PASSWORD=LetsCode -d -p 8080:8080 -v "/home/austinengle/code:/home/coder/project" code-server-python
