@@ -22,4 +22,5 @@ RUN sudo rm -rf /var/lib/apt/lists/*
 RUN git config --global user.name "Austin Engle" && \
     git config --global user.email "aengl29@wgu.edu"
 
-CMD ["code-server", "--allow-http", "--no-auth"]
+CMD ["code-server"] 
+#"--allow-http", "--no-auth"]
