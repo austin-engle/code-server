@@ -4,14 +4,14 @@ FROM codercom/code-server:latest
 RUN code-server --install-extension ms-python.python && \
     code-server --install-extension njpwerner.autodocstring && \
     code-server --install-extension coenraads.bracket-pair-colorizer-2 && \
-    code-server --install-extension equinusocio.vsc-material-theme && \
-    code-server --install-extension euskadi31.json-pretty-printer
+    code-server --install-extension equinusocio.vsc-material-theme
+# code-server --install-extension euskadi31.json-pretty-printer
 
 # ubuntu installations (e.g. Python)
-RUN sudo -E apt-get update && sudo -E apt-get install -y \
-    python3.8 \
-    python3-pip \
- && sudo rm -rf /var/lib/apt/lists/*
+RUN sudo -E apt-get update 
+RUN sudo -E apt-get install -y python3.8
+RUN sudo -E apt-get install -y python3-pip
+RUN sudo rm -rf /var/lib/apt/lists/*
 
 # python requirements
 # COPY requirements.txt /home/coder/
