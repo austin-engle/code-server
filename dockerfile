@@ -9,7 +9,8 @@ RUN code-server --install-extension ms-python.python && \
 
 # ubuntu installations (e.g. Python)
 RUN sudo -E apt-get update 
-RUN sudo -E apt-get install -y python3.8
+RUN sudo -E apt-get upgrade -y
+RUN sudo -E apt-get install -y python3.7
 RUN sudo -E apt-get install -y python3-pip
 RUN sudo rm -rf /var/lib/apt/lists/*
 
